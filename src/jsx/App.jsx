@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../styles/styles.less';
 
 // Load helpers.
-import ChartMap from './modules/ChartMap.jsx';
+import ChartMap from './components/ChartMap.jsx';
 import Legend from './components/Legend.jsx';
 
 function App() {

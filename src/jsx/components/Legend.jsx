@@ -7,7 +7,6 @@ function Legend() {
         <div>← more exports</div>
         <div>more imports →</div>
       </div>
-
       <div className="legend_bar">
         <div style={{ backgroundColor: '#004987' }} />
         <div style={{ backgroundColor: '#009EDB' }} />
