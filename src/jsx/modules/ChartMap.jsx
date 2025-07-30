@@ -135,6 +135,7 @@ function ChartMap({ values }) {
                   return false;
                 }
                 if (chinaAreas.includes(element.id)) {
+                  console.log('asd');
                   const { chart } = element.series;
                   chinaAreas.forEach((area) => {
                     chart.get(area)?.setState('hover');
@@ -180,15 +181,14 @@ function ChartMap({ values }) {
             const value = match ? parseFloat(match.value) : null;
             const { code } = region.properties; // Store region code
             let labelen = code;
-            if (chinaAreas.includes(code)) {
-              labelen = 'China';
-            } else if (labelMap[code]) {
+            if (labelMap[code]) {
               labelen = labelMap[code].labelen;
             }
             return {
               borderWidth: 0,
               color: getColor(value, code, data, 'value', chinaAreas),
               geometry: region.geometry,
+              id: code,
               name: labelen,
               value
             };
