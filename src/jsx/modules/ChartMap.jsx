@@ -135,7 +135,6 @@ function ChartMap({ values }) {
                   return false;
                 }
                 if (chinaAreas.includes(element.id)) {
-                  console.log('asd');
                   const { chart } = element.series;
                   chinaAreas.forEach((area) => {
                     chart.get(area)?.setState('hover');

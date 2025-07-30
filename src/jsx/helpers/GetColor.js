@@ -26,7 +26,7 @@ function getColorFromValue(value, type) {
 }
 
 // Define a color mapping function based on value **and code**
-const getColor = (value, code, data, type, china_areas) => {
+const getColor = (value, code, data, type) => {
   // First check if this code is special
   if (code === 'C00002') { // AksaiChin
     const kashmirData = data.find(item => item.code === 'C00007'); // Find kashmir in data
@@ -56,11 +56,11 @@ const getColor = (value, code, data, type, china_areas) => {
     const serbiaValue = serbiaData ? serbiaData[type] : null;
     return getColorFromValue(serbiaValue, type);
   }
-  if (china_areas.includes(code)) { // Macao, HongKong, China, Taiwan = China
-    const chinaData = data.find(item => item.code === '156');
-    const chinaValue = chinaData ? chinaData[type] : null;
-    return getColorFromValue(chinaValue, type);
-  }
+  // if (china_areas.includes(code)) { // Macao, HongKong, China, Taiwan = China
+  //   const chinaData = data.find(item => item.code === '156');
+  //   const chinaValue = chinaData ? chinaData[type] : null;
+  //   return getColorFromValue(chinaValue, type);
+  // }
 
   return getColorFromValue(value, type);
 };
