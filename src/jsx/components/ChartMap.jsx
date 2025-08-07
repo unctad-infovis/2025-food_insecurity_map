@@ -116,7 +116,7 @@ function ChartMap({ values }) {
         buttonOptions: {
           verticalAlign: 'bottom'
         },
-        enableButtons: true,
+        enableButtons: false,
         enabled: false
       },
       plotOptions: {
